@@ -1,2 +1,2 @@
-# Voxel-Eras-Creater
+# Voxel-Eras-creator
 A Voxel Eras mod helper for the dumbys or just wanna make a block
