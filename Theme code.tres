@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b4p01rrdvd6em"]
+
+[ext_resource type="FontFile" uid="uid://bcfovw7tfiaei" path="res://LXGWWenKaiMonoTC-Regular.ttf" id="1_i3wg7"]
+
+[resource]
+default_font = ExtResource("1_i3wg7")
+CodeEdit/font_sizes/font_size = 10
+CodeEdit/fonts/font = ExtResource("1_i3wg7")

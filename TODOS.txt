@@ -1,0 +1,3 @@
+Get saveing and file opening working for mods
+get code gen so mods work lol
+tech blocks later a bit more complix may need over hull of ui

@@ -1,0 +1,421 @@
+[gd_scene load_steps=14 format=3 uid="uid://dgt6qn11krmn8"]
+
+[ext_resource type="Script" uid="uid://cuowkjpvy6mx3" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Theme" uid="uid://b4p01rrdvd6em" path="res://Theme code.tres" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://ipb7b3uu2p" path="res://syntax.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://mqcax88bk1il" path="res://main_menu.gd" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://byr2ngkqodg8h" path="res://B.png" id="3_efxa6"]
+[ext_resource type="Texture2D" uid="uid://bsp5saidebpmx" path="res://Lef.png" id="4_dg77c"]
+[ext_resource type="Texture2D" uid="uid://4psdc23bgt65" path="res://Fro.png" id="5_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://bumhuegjx13o2" path="res://R.png" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://71tkjkf1drng" path="res://Top.png" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://52o2dvngxhls" path="res://Bot.png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://d2xovoigekjq3" path="res://Item dev.png" id="9_dg77c"]
+[ext_resource type="Script" uid="uid://bxmx7x48ysy35" path="res://settings.gd" id="10_ycdy4"]
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_7dm0k"]
+number_color = Color(0.709804, 0.807843, 0.658824, 1)
+symbol_color = Color(0.0901961, 0.560784, 0.772549, 1)
+function_color = Color(0.862745, 0.862745, 0.666667, 1)
+member_variable_color = Color(1, 1, 1, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.203922, 0.207843, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu block type" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.916667
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu block type"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0493827
+anchor_right = 1.0
+anchor_bottom = 0.950617
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Code" type="Button" parent="Menu block type/VBoxContainer"]
+layout_mode = 2
+text = "Code"
+flat = true
+
+[node name="Main" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0277778
+anchor_top = 0.0493827
+anchor_right = 0.909722
+anchor_bottom = 0.950617
+script = ExtResource("2_lquwl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Mod Name" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0314961
+anchor_top = 0.0547945
+anchor_right = 0.283465
+anchor_bottom = 0.109589
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Main/Mod Name"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VECreater_Mod"
+flat = true
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Authors" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031496
+anchor_top = 0.123288
+anchor_right = 0.283465
+anchor_bottom = 0.178082
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Main/Authors"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You"
+flat = true
+caret_blink = true
+
+[node name="Textures" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.700787
+anchor_top = 0.0547945
+anchor_right = 0.968504
+anchor_bottom = 0.410959
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0294117
+anchor_top = 0.346154
+anchor_right = 0.264706
+anchor_bottom = 0.653846
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_efxa6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Left" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.264706
+anchor_top = 0.346154
+anchor_right = 0.5
+anchor_bottom = 0.653846
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dg77c")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Front" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.346154
+anchor_right = 0.735294
+anchor_bottom = 0.653846
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_ycdy4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.735294
+anchor_top = 0.346154
+anchor_right = 0.970588
+anchor_bottom = 0.653846
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_w48qg")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Top" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.0384615
+anchor_right = 0.735294
+anchor_bottom = 0.346154
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("7_vivmo")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom" type="TextureRect" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.653846
+anchor_right = 0.735294
+anchor_bottom = 0.961538
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("8_2cqfq")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Back button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0294117
+anchor_top = 0.346154
+anchor_right = 0.264706
+anchor_bottom = 0.653846
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Left button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.264706
+anchor_top = 0.346154
+anchor_right = 0.5
+anchor_bottom = 0.653846
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Front button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.346154
+anchor_right = 0.735294
+anchor_bottom = 0.653846
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.735294
+anchor_top = 0.346154
+anchor_right = 0.970588
+anchor_bottom = 0.653846
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Top button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.0384615
+anchor_right = 0.735294
+anchor_bottom = 0.346154
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom button" type="TextureButton" parent="Main/Textures"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.653846
+anchor_right = 0.735294
+anchor_bottom = 0.961538
+tooltip_text = "Block"
+metadata/_edit_use_anchors_ = true
+
+[node name="Item" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.614173
+anchor_top = 0.0547945
+anchor_right = 0.692913
+anchor_bottom = 0.191781
+metadata/_edit_use_anchors_ = true
+
+[node name="Item" type="TextureRect" parent="Main/Item"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.100001
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_right = 0.000137329
+offset_bottom = -4.57764e-05
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Item button" type="TextureButton" parent="Main/Item"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0999985
+anchor_top = 0.0999999
+anchor_right = 0.899998
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Item"
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0314961
+anchor_top = 0.273973
+anchor_right = 0.283465
+anchor_bottom = 0.821918
+script = ExtResource("10_ycdy4")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ITEM NAME" type="LineEdit" parent="Main/Settings/VBoxContainer"]
+layout_mode = 2
+text = "Dev_test_Block"
+flat = true
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Main/Settings/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BoxContainer" type="BoxContainer" parent="Main/Settings/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Item" type="CheckButton" parent="Main/Settings/VBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Item"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Block" type="CheckButton" parent="Main/Settings/VBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Block"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Save" type="Button" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.314961
+anchor_top = 0.0547945
+anchor_right = 0.370079
+anchor_bottom = 0.109589
+text = "Save"
+metadata/_edit_use_anchors_ = true
+
+[node name="File path" type="Button" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.401575
+anchor_top = 0.0547945
+anchor_right = 0.480315
+anchor_bottom = 0.109589
+text = "File Path"
+metadata/_edit_use_anchors_ = true
+
+[node name="CodeEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.909722
+anchor_bottom = 1.0
+theme = ExtResource("1_h2yge")
+emoji_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_smooth = true
+minimap_draw = true
+minimap_width = 40
+caret_blink = true
+syntax_highlighter = SubResource("CodeHighlighter_7dm0k")
+highlight_all_occurrences = true
+highlight_current_line = true
+script = ExtResource("1_ig7tw")
+metadata/_edit_use_anchors_ = true
+
+[node name="File" type="FileDialog" parent="."]
+initial_position = 2
+content_scale_mode = 1
+content_scale_aspect = 4
+ok_button_text = "Open"
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png,*.jpg,*.jpeg;Image Files;image/png,image/jpeg")
+show_hidden_files = true
+use_native_dialog = true
+
+[connection signal="pressed" from="Menu block type/VBoxContainer/Code" to="." method="_on_code_pressed"]
+[connection signal="text_submitted" from="Main/Mod Name/LineEdit" to="Main" method="_on_name_text_submitted"]
+[connection signal="pressed" from="Main/Textures/Back button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Main/Textures/Left button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Main/Textures/Front button" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="Main/Textures/Right button" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="Main/Textures/Top button" to="." method="_on_top_button_pressed"]
+[connection signal="pressed" from="Main/Textures/Bottom button" to="." method="_on_bottom_button_pressed"]
+[connection signal="pressed" from="Main/Item/Item button" to="." method="_on_item_button_pressed"]
+[connection signal="text_submitted" from="Main/Settings/VBoxContainer/ITEM NAME" to="Main" method="_on_item_name_text_submitted"]
+[connection signal="pressed" from="Main/Settings/VBoxContainer/Panel/BoxContainer/Item" to="Main/Settings" method="_on_item_pressed"]
+[connection signal="pressed" from="Main/Settings/VBoxContainer/Panel/BoxContainer/Block" to="Main/Settings" method="_on_block_pressed"]
+[connection signal="pressed" from="Main/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Main/File path" to="." method="_on_file_path_pressed"]
+[connection signal="file_selected" from="File" to="." method="_on_file_dialog_file_selected"]
